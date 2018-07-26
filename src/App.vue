@@ -8,7 +8,9 @@
         </ul>
       </nav>
     </header>
-    <router-view/>
+    <transition name="fade">
+      <router-view/>
+    </transition>
     <footer class="footer">I am footer</footer>
   </div>
 </template>
@@ -20,28 +22,5 @@ export default {
 </script>
 
 <style>
-body {
-  padding: 0;
-  margin: 0;
-}
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-}
-.menu__wrapper {
-  display: flex;
-  margin: 0;
-  padding: 10px;
-  justify-content: center;
-  list-style-type: none;
-}
-.menu__list {
-  padding: 10px;
-}
+
 </style>
