@@ -1,18 +1,18 @@
 <template>
   <div class="hello">
-    <h1>About our Company</h1>
+    <h1>About our Contacts</h1>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'About'
+  name: 'Contacts'
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 h1 {
-  background-color: blueviolet;
+  background-color: rgb(165, 11, 11);
 }
 </style>

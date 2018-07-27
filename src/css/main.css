@@ -19,8 +19,6 @@ input, textarea {
 	resize: none;
 }
 #app {
-	display: flex;
-  flex-direction: column;
 	font-family: 'Avenir', Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
@@ -28,7 +26,8 @@ input, textarea {
 	color: #2c3e50;
 	width: 100vw;
 	height: 100vh;
-	overflow: auto;
+	overflow-x: hidden;
+	overflow-y: auto;
 }      
 /***** transition *****/
 .fade-enter-active, .fade-leave-active {
@@ -46,28 +45,31 @@ input, textarea {
 ***************************************/
 /***** header *****/
 .header {
-	flex-grow: 1;
+	background-color: darkseagreen;
 }
-.menu__wrapper {
-	list-style-type: none;
-	padding: 0;
-}
-  .menu__list {
-    display: inline-block;
-    margin: 0 10px;
-  }
-  .menu__link {
-    color: #42b983;
-  }
-  
+	.logo-area {
+		height: 230px;
+	}
+/*nav*/
+nav {
+	background-color: #c1c1c1;
+} 
+	.nav-link, .nav-link:hover {
+		color: white;
+		text-transform: uppercase;
+	}
+	.nav-link.router-link-exact-active {
+		color: maroon;
+		text-decoration: underline !important;
+	}
 /***** body *****/
 .main {
-	flex-grow: 100;
+
 }
 
 /***** footer *****/
 .footer {
-	flex-grow: 1;
+
 }
 
 /**************************************

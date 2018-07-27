@@ -339,3 +339,10 @@
   [hidden] {
     display: none;
   }
+
+  /**
+   * box sizing for all items.
+   */
+   *,*::before,*::after {
+    box-sizing: border-box;
+  }

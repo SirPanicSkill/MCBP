@@ -3,8 +3,11 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router'
+import 'bootstrap'
+import $ from 'jquery'
 
-Vue.config.productionTip = false
+Vue.config.productionTip = false;
+window.$ = window.jQuery = $;
 
 /* eslint-disable no-new */
 new Vue({
