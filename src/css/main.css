@@ -1,5 +1,67 @@
 /*************************\
-       site castomize
+       fonts
+\*************************/
+@font-face {
+  font-family: "Georgia Italic";
+  src: url("../fonts/Georgia-Italic.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Helios Regular";
+  src: url("../fonts/Helios.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Helios Bold";
+  src: url("../fonts/Helios-Bold.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+  font-family: "Helios Light";
+  src: url("../fonts/Helios-light.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal;
+}
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url("../fonts/Material/MaterialIcons-Regular.eot"); /* For IE6-8 */
+	src: local('Material Icons'),
+		local('MaterialIcons-Regular'),
+		url("../fonts/Material/MaterialIcons-Regular.woff2") format('woff2'),
+		url("../fonts/Material/MaterialIcons-Regular.woff") format('woff'),
+		url("../fonts/Material/MaterialIcons-Regular.ttf") format('truetype');
+}
+.material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 1;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+}
+/*************************\
+       site customize
 \*************************/
 /* убрать выделение */
 body {
@@ -19,7 +81,7 @@ input, textarea {
 	resize: none;
 }
 #app {
-	font-family: 'Avenir', Helvetica, Arial, sans-serif;
+	font-family: "Helios Regular", Helvetica, Arial, sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	text-align: center;
@@ -46,21 +108,101 @@ input, textarea {
 /***** header *****/
 .header {
 	background-color: darkseagreen;
+	min-height: 280px;
+	width: 100vw;
 }
 	.logo-area {
 		height: 230px;
+		background-image: url(../assets/header.png);
+		background-position: 50% 50%;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+	.logo-area_container {
+		width: 100%;
+		height: 100%;
+		overflow: hidden;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+	}
+	.logo-info {
+		display: flex;
+		justify-content: start;
+	}
+	.logo {
+		max-height: 114px;
+	}
+	.logo-info_about {
+		text-align: left;
+		margin-left: 10px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+	}
+	.logo-info_about p {
+		font-size: 1.2rem;
+		font-family: "Helios Bold", sans-serif;
+		color: #822e41;
+	}
+	.logo-info_about span {
+		font-family: "Georgia Italic", sans-serif;
+		font-size: 20px;
+	}
+
+	.logo-contacts {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.logo-contacts .phone_icon img {
+		width: 25px;
+		margin-right: 5px;
+	}
+	.logo-contacts .phone {
+		font-family: "Helios Bold", sans-serif;
+		font-size: 20px;
+	}
+	.logo-contacts .ask {
+		width: 200px;
+		height: auto;
+		background-color: white;
+		border-radius: 20px;
+	}
+	.logo-contacts .ask a {
+		width: 100%;
+		padding: 6px 0;
+		text-decoration: none;
+		color: #822e41;
+		display: block;
+		font-family: "Helios Bold", sans-serif;
 	}
 /*nav*/
-nav {
-	background-color: #c1c1c1;
+nav.navbar {
+	min-height: 50px;
+	background-color: #822e41;
+	border-top: 1px solid white;
+	font-family: "Helios Bold", sans-serif;
+	padding: 0;
 } 
+	.navbar * {
+		height: 100%;
+		line-height: 33px;
+		color: white !important;
+	}
+	.nav-link {
+		padding-right: 20px !important;
+		padding-left: 20px !important;
+		font-size: 1rem;
+	}
 	.nav-link, .nav-link:hover {
 		color: white;
 		text-transform: uppercase;
 	}
 	.nav-link.router-link-exact-active {
-		color: maroon;
+		color: #822e41 !important;
 		text-decoration: underline !important;
+		background-color: white;
 	}
 /***** body *****/
 .main {
@@ -82,3 +224,15 @@ nav {
   
 }
 
+@media (max-width: 1100px) and (min-width: 760px){
+	.nav-link {
+		font-size: 1.2vw;
+	}
+
+}
+
+@media (max-width: 760px){
+	.navbar-nav {
+		padding-right: 0 !important;
+	}
+}
