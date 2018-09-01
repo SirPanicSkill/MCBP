@@ -112,11 +112,14 @@ input, textarea {
 	width: 100vw;
 }
 	.logo-area {
-		height: 230px;
+		min-height: 230px;
+  	height: auto;
 		background-image: url(../assets/header.png);
 		background-position: 50% 50%;
 		background-repeat: no-repeat;
 		background-size: cover;
+		display: flex;
+		align-items: center;
 	}
 	.logo-area_container {
 		width: 100%;
@@ -125,10 +128,12 @@ input, textarea {
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
+		flex-wrap: wrap;
 	}
 	.logo-info {
 		display: flex;
 		justify-content: start;
+		margin: 15px 0;
 	}
 	.logo {
 		max-height: 114px;
@@ -154,6 +159,7 @@ input, textarea {
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
+		margin: 15px 0;
 	}
 	.logo-contacts .phone_icon img {
 		width: 25px;
@@ -162,6 +168,12 @@ input, textarea {
 	.logo-contacts .phone {
 		font-family: "Helios Bold", sans-serif;
 		font-size: 20px;
+	}
+	.logo-contacts .phone a {
+		color: #333;
+	}
+	.logo-contacts .phone a:hover {
+		text-decoration: none;
 	}
 	.logo-contacts .ask {
 		width: 200px;
@@ -185,6 +197,9 @@ nav.navbar {
 	font-family: "Helios Bold", sans-serif;
 	padding: 0;
 } 
+	.navbar-toggler {
+		margin: 5px 0;
+	}
 	.navbar * {
 		height: 100%;
 		line-height: 33px;
@@ -205,14 +220,76 @@ nav.navbar {
 		background-color: white;
 	}
 /***** body *****/
-.main {
-
+main {
+	min-height: 500px;
 }
 
 /***** footer *****/
 .footer {
-
+	min-height: 200px;
+	height: auto;
+	background-color: #822e41;
+	color: white;
+	display: flex;
+	flex-direction: column;
 }
+.footer hr {
+	width: 100%;
+	margin-top: 5px;
+	border-color: white;
+}
+.footer .container .row {
+	align-items: center;
+}
+	/*nav*/
+	.footer .navbar-nav {
+		flex-direction: row;
+	}
+	.footer .nav-link.router-link-exact-active {
+		color: white !important;
+		text-decoration: none !important;
+		background-color: transparent;
+	}
+	/*social*/
+	.footer .social a {
+		display: inline-block;
+		width: 24px;
+		height: 24px;
+		margin-right: 5px;
+	}
+	.footer .social .fb {
+		background: url(../assets/fb.png) no-repeat 0 0 / cover;
+	}
+	.footer .social .vk {
+		background: url(../assets/vk.png) no-repeat 0 0 / cover;
+	}
+	.footer .social .yt {
+		background: url(../assets/youtube.png) no-repeat 0 0 / cover;
+	}
+	/*address*/
+	.footer .address .time::before {
+		content: '';
+		display: inline-block;
+		margin-right: 5px;
+  	transform: translateY(5px);
+		width: 20px;
+		height: 20px;
+		background: url(../assets/time.png) no-repeat 0 0 / cover;
+	}
+	.footer address a {
+		color: white;
+	}
+	.footer address a:hover {
+		text-decoration: none;
+	}
+	/*copyright*/
+	.footer .copyright {
+		color: rgba(255,255,255,0.4);
+	}
+	/*contacts*/
+	.footer .contacts a {
+		color: white;
+	}
 
 /**************************************
               MEDIA
@@ -223,16 +300,61 @@ nav.navbar {
   (pointer:coarse) {
   
 }
-
+/*view > 1100px*/
+@media (min-width: 1100px){
+	div#mainNavbar {
+		height: 49px !important;
+	}
+	.navbar-toggler {
+		pointer-events: none;
+	}
+}
+/*760px < view < 1100px*/
 @media (max-width: 1100px) and (min-width: 760px){
+	/*nav*/
+	div#mainNavbar {
+		height: 49px !important;
+	}
+	.logo {
+		max-height: 100px;
+	}
+	.logo-area_container {
+		justify-content: center;
+	}
 	.nav-link {
 		font-size: 1.2vw;
 	}
-
+	.navbar-toggler {
+		pointer-events: none;
+	}
+	/*footer*/
+	.footer .navbar-nav {
+		justify-content: space-around;
+	}
 }
-
+/*view < 760px*/
 @media (max-width: 760px){
+	/*nav*/
+	.logo {
+		max-height: 55px;
+	}
+	.logo-area_container {
+		justify-content: center;
+	}
 	.navbar-nav {
 		padding-right: 0 !important;
+	}
+}
+/*view > 576px*/
+@media (min-width: 576px){
+	.container {
+		max-width: 540px;
+	}
+}
+/*view < 576px*/
+@media (max-width: 576px){
+	/*footer*/
+	.footer .navbar-nav {
+		flex-direction: column;
 	}
 }
