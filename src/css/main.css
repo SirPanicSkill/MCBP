@@ -223,6 +223,20 @@ nav.navbar {
 main {
 	min-height: 500px;
 }
+	/*slider*/
+	.banner .slick-dots {
+		text-align: left;
+		bottom: 40px;
+		left: 50px;
+	}
+	.banner .slick-dots li button:before {
+		font-size: 20px;
+		color: #822e41;
+	}
+	.banner .slick-dots li.slick-active button:before {
+		color: #822e41;
+		opacity: 1;
+	}
 
 /***** footer *****/
 .footer {
