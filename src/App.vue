@@ -4,7 +4,7 @@
       <div class="logo-area container-fluid">
         <div class="container logo-area_container">
           <div class="logo-info">
-            <img src="./assets/logo.png" alt="logo" class="logo ">
+            <img src="./assets/logo.png" alt="logo" class="logo">
             <div class="logo-info_about">
               <p>МНОГОФУНКЦИОНАЛЬНЫЙ ЦЕНТР<br/>ПОДДЕРЖКИ БИЗНЕСА</p>
               <span>Поднимаем Ваш бизнес наверх!</span>
@@ -33,7 +33,7 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <div class="collapse navbar-collapse" id="mainNavbar">
-            <ul class="navbar-nav container">
+            <ul class="navbar-nav container text-float">
               <li class="nav-item">
                 <router-link class="nav-link" @click.native="toggler()" to="/">Главная</router-link>
               </li>
@@ -58,11 +58,9 @@
       </nav>
     </header>
     <main class="main">
-      <div class="container">
-        <transition name="fade">
-          <router-view/>
-        </transition>
-      </div>
+      <transition name="fade">
+        <router-view/>
+      </transition>
     </main>
     <footer class="footer">
       <hr/>

@@ -63,6 +63,9 @@
 /*************************\
        site customize
 \*************************/
+hr {
+	border-top-color: #822e41 !important;
+}
 /* убрать выделение */
 body {
 	-webkit-tap-highlight-color: rgba(255, 255, 255, 0);
@@ -90,7 +93,11 @@ input, textarea {
 	height: 100vh;
 	overflow-x: hidden;
 	overflow-y: auto;
-}      
+}    
+/***** responsive font-size ******/
+.text-float * {
+	font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300))) !important;
+}
 /***** transition *****/
 .fade-enter-active, .fade-leave-active {
 	transition-property: opacity;
@@ -206,7 +213,7 @@ nav.navbar {
 		color: white !important;
 	}
 	.nav-link {
-		padding-right: 20px !important;
+		padding-right: 18px !important;
 		padding-left: 20px !important;
 		font-size: 1rem;
 	}
@@ -222,6 +229,7 @@ nav.navbar {
 /***** body *****/
 main {
 	min-height: 500px;
+	width: 100vw;
 }
 	/*slider*/
 	.banner .slick-dots {
@@ -237,15 +245,33 @@ main {
 		color: #822e41;
 		opacity: 1;
 	}
+	/*partners*/
+	.partners__wrapper .slick-slide {
+		margin: 0 5px;
+	}
+	.partners__wrapper .slick-prev {
+		left: 0;
+		z-index: 1;
+	}
+	.partners__wrapper .slick-next {
+		right: 0;
+		z-index: 1;
+	}
+	.partners__wrapper .slick-prev:before, 
+	.partners__wrapper .slick-next:before {
+		color: #822e41;
+	}
 
 /***** footer *****/
 .footer {
+	width: 100vw;
 	min-height: 200px;
 	height: auto;
 	background-color: #822e41;
 	color: white;
 	display: flex;
 	flex-direction: column;
+	margin-top: 30px;
 }
 .footer hr {
 	width: 100%;
@@ -334,9 +360,6 @@ main {
 	}
 	.logo-area_container {
 		justify-content: center;
-	}
-	.nav-link {
-		font-size: 1.2vw;
 	}
 	.navbar-toggler {
 		pointer-events: none;
