@@ -63,7 +63,7 @@
 /*************************\
        site customize
 \*************************/
-hr {
+section + hr {
 	border-top-color: #822e41 !important;
 }
 /* убрать выделение */
@@ -206,6 +206,7 @@ nav.navbar {
 } 
 	.navbar-toggler {
 		margin: 5px 0;
+		filter: invert(1);
 	}
 	.navbar * {
 		height: 100%;
@@ -222,9 +223,7 @@ nav.navbar {
 		text-transform: uppercase;
 	}
 	.nav-link.router-link-exact-active {
-		color: #822e41 !important;
 		text-decoration: underline !important;
-		background-color: white;
 	}
 /***** body *****/
 main {

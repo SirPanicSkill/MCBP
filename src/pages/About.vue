@@ -69,7 +69,7 @@
       <p class="col-12">НАШИ ПАРТНЕРЫ</p>
       <div class="col-12 partners__text">Мы сотрудничаем с большим числом ведущих банков. И они могут ручаться за нашу работу, о чем свидетельствует ряд наград и сертификатов.  Для нас большая часть быть партнерами!</div>
       <div class="col-12 partners__wrapper">
-        <a href="../assets/sert_vozr.png" target="_blank" class="partners__sert vozr"></a>
+        <a href="../assets/sert_vozr.png#" target="_blank" class="partners__sert vozr"></a>
         <a href="../assets/sert_prom.png" target="_blank" class="partners__sert prom"></a>
         <a href="../assets/sert_sber.png" target="_blank" class="partners__sert sber"></a>
         <a href="../assets/sert_vtb.png" target="_blank" class="partners__sert vtb"></a>
