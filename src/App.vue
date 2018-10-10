@@ -16,7 +16,7 @@
                 <i class="phone_icon">
                   <img src="./assets/phone.png" alt="">
                 </i>
-                <a href="tel:+79164540440" class="phone-number">+7 (916) 454-04-40</a>
+                <a href="tel:+79151824274" class="phone-number">+7 (915) 182-42-74</a>
                 <br/>
                 <a href="mailto:office@mcpb.ru">office@mcpb.ru</a>
               </p>
@@ -107,7 +107,7 @@
             <p>Все права защищены.</p>
           </div>
           <div class="contacts col-lg-4">
-            <p><a href="tel:+79164540440" class="phone-number">+7 (916) 454-04-40</a></p>
+            <p><a href="tel:+79151824274" class="phone-number">+7 (915) 182-42-74</a></p>
             <p><a href="mailto:office@mcpb.ru">office@mcpb.ru</a></p>
           </div>
         </div> 

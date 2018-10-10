@@ -389,8 +389,23 @@ main {
 }
 /*view < 576px*/
 @media (max-width: 576px){
+	/*about*/
+
 	/*footer*/
 	.footer .navbar-nav {
 		flex-direction: column;
 	}
 }
+/*view < 400px*/
+@media (max-width: 400px){
+	/*logo top*/
+	.logo-info {
+	  flex-direction: column;
+	  align-items: center;
+	}
+	.logo {
+	  height: auto;
+	  width: 100px;
+	  max-height: none;
+	}
+  }
